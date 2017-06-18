@@ -5,6 +5,10 @@
     {
       "version": "1.0.0",
       "modules": [ "CloukitToggleModule" ]
+    },
+    {
+      "version": "1.0.1",
+      "modules": [ "ToggleModule" ]
     }
   ]
 }
