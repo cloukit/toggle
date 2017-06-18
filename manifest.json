@@ -1,0 +1,7 @@
+{
+  "moduleId": "toggle",
+  "version": "1.0.0-beta",
+  "peerDependencies": {
+    "@angular/core": "^4.0.1"
+  }
+}
