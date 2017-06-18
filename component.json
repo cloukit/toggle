@@ -1,6 +1,6 @@
 {
   "name": "toggle",
-  "description": "A toggle component that can be used in a Reactive Form for a boolean.",
+  "description": "A toggle component that can be used in an Angular Reactive Form for a boolean.",
   "versions": [
     {
       "version": "1.0.0",
