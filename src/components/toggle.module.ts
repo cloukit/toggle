@@ -5,12 +5,13 @@
  */
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
 import { CloukitToggleComponent } from './toggle.component';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  imports: [ CommonModule, FormsModule ],
+  imports: [ CommonModule, BrowserModule, FormsModule ],
   exports: [ CloukitToggleComponent ],
-  declarations: [ CloukitToggleComponent ],
+  declarations: [ CloukitToggleComponent ]
 })
 export class ToggleModule {}
