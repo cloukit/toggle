@@ -23,6 +23,7 @@ System.config({
     '@angular/http/testing': 'npm:@angular/http@4.0.0/bundles/http-testing.umd.js',
     '@angular/router/testing': 'npm:@angular/router@4.0.0/bundles/router-testing.umd.js',
 
+    '@cloukit/theme': 'npm:@cloukit/theme@1.2.7/theme.es5.js',
     '@cloukit/toggle': 'npm:@cloukit/toggle@1.1.0/toggle.es5.js',
 
     'rxjs': 'npm:rxjs@5.1.0',
