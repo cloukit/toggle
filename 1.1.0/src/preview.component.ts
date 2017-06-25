@@ -20,8 +20,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 
     Is the cat dead? <br><br>
     <cloukit-toggle
-      [form]="form"
-      controlName="isCatDead"
+      formControlName="isCatDead"
     ></cloukit-toggle>
 
     <br><br><hr><br><br>
