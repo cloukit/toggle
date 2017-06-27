@@ -2,4 +2,9 @@
 <!-- !!! DO NOT USE UNECESSARY MARRKUP THAT BREAKS THE CORPORATE DESIGN !!! -->
 
 Use toggle inside your [Reactive Forms](https://angular.io/guide/reactive-forms).
-foo
+
+```html
+<cloukit-toggle
+  formControlName="isCatDead"
+></cloukit-toggle>
+```
