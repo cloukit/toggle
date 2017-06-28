@@ -25,6 +25,9 @@ export const CLOUKIT_TOGGLE_VALUE_ACCESSOR: any = {
       (click)="toggleValue()"
       [ngStyle]="getStyle('wrapper').style"
     >
+      <span
+        [ngStyle]="getStyle('circle').style"
+      ></span>
       <svg
         viewBox="0 0 512 512"
         [ngStyle]="getStyle('iconLeft').style"
@@ -59,7 +62,8 @@ export class CloukitToggleComponent implements ControlValueAccessor {
   };
 
   getStyle(element: string): CloukitStatefulAndModifierAwareElementThemeStyleDefinition {
-    return this.theme.getStyle(element, this.state.uiState, this.state.uiModifier);
+    const style = this.theme.getStyle(element, this.state.uiState, this.state.uiModifier);
+    return this.themeService.prefixStyle(style);
   }
 
   updateUiModifierAndState() {

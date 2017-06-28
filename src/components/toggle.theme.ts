@@ -16,28 +16,45 @@ export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
     //
     this.createStyle('wrapper', 'untoggled', 'base', {
       style: {
-        border: '2px solid #555',
+        border: '1px solid #555',
+        borderRadius: '12px',
+        position: 'relative',
         padding: '2px',
         userSelect: 'none',
         cursor: 'pointer',
         width: '40px',
+        height: '18px',
         display: 'inline-block',
         backgroundColor: '#777',
         transition: 'background-color 300ms linear',
       }
     } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition);
 
+    this.createStyle('circle', 'untoggled', 'base', {
+      style: {
+        borderRadius: '50%',
+        width: '18px',
+        height: '18px',
+        position: 'absolute',
+        left: '2px',
+        backgroundColor: '#fff',
+        userSelect: 'none',
+        transition: 'left 300ms linear',
+      }
+    } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition);
+
     this.createStyle('iconLeft', 'untoggled', 'base', {
       style: {
         width: '20px',
-        transition: 'fill 2s',
         display: 'none',
+        marginTop: '-1px',
       },
       icon: {
         svgPathD: CloukitIcons.success,
         svgStyle: {
           fill: '#fff',
-          transform: 'translate(25px, 130px)'
+          transform: 'translate(3px, 2px)',
+          transition: 'fill 2s',
         }
       }
     } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition);
@@ -45,14 +62,15 @@ export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
     this.createStyle('iconRight', 'untoggled', 'base', {
       style: {
         width: '20px',
-        transition: 'fill 2s',
         paddingLeft: '20px',
+        marginTop: '-1px',
       },
       icon: {
         svgPathD: CloukitIcons.failure,
         svgStyle: {
           fill: '#fff',
-          transform: 'translate(25px, 130px)'
+          transform: 'translate(3px, 2px)',
+          transition: 'fill 2s',
         }
       }
     } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition);
@@ -66,34 +84,24 @@ export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
       }
     } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
 
-    this.createStyle('iconLeft', 'toggled', 'base', {
-      style: {
-        width: '20px',
-        transition: 'fill 2s',
-      },
-      icon: {
-        svgPathD: CloukitIcons.success,
-        svgStyle: {
-          fill: '#fff',
-          transform: 'translate(25px, 130px)'
-        }
-      }
-    } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition);
 
-    this.createStyle('iconRight', 'toggled', 'base', {
+    this.createStyle('circle', 'toggled', 'base', this.merge(this.getStyle('circle', 'untoggled', 'base'), {
       style: {
-        width: '20px',
-        transition: 'fill 2s',
-        display: 'none',
-      },
-      icon: {
-        svgPathD: CloukitIcons.success,
-        svgStyle: {
-          fill: '#fff',
-          transform: 'translate(25px, 130px)'
-        }
+        left: '24px'
       }
-    } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition);
+    } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+
+    this.createStyle('iconLeft', 'toggled', 'base', this.merge(this.getStyle('iconLeft', 'untoggled', 'base'), {
+      style: {
+        display: 'inline-block',
+      }
+    } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+
+    this.createStyle('iconRight', 'toggled', 'base', this.merge(this.getStyle('iconRight', 'untoggled', 'base'), {
+      style: {
+        display: 'none',
+      }
+    } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
   }
 
 }
