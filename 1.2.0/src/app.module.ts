@@ -15,12 +15,7 @@ export class MyThemeService extends CloukitThemeService {
     super();
     const myToggleTheme = new CloukitToggleComponentThemeDefault();
     console.log(prefixAll({ userSelect: 'none' }));
-    this.registerPrefixer((x) => {
-
-      const pre = prefixAll(x);
-      
-      return pre;
-    });
+    this.registerPrefixer(prefixAll);
     this.registerComponentTheme('toggle', myToggleTheme);
   }
 };
