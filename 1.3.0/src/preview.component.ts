@@ -28,7 +28,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
     With different theme: <br>
 
     <cloukit-toggle
-      formControlName="isCatDead"
+      formControlName="areYouSure"
       theme="toggle--cornered"
     ></cloukit-toggle>
 
@@ -47,7 +47,8 @@ export class PreviewComponent {
   constructor(fb: FormBuilder) {
     this.form = fb.group({
       cat: 'Schrödingers',
-      isCatDead: false
+      isCatDead: false,
+      areYouSure: true,
     });
 
     this.styles.base = {
