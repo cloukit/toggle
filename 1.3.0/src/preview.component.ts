@@ -18,21 +18,21 @@ import { FormGroup, FormBuilder } from '@angular/forms';
     />
     <br><br>
 
-    Is the cat dead? <br><br>
+    Is the cat dead? <br>
     <cloukit-toggle
       formControlName="isCatDead"
     ></cloukit-toggle>
 
     <br><br>
 
-    With differen theme: <br><br>
+    With different theme: <br>
 
     <cloukit-toggle
       formControlName="isCatDead"
       theme="toggle--cornered"
     ></cloukit-toggle>
 
-    <br><br><hr><br><br>
+    <br><br><hr><br>
 
     Reactive Form Result:
     <pre>{{getFormResult()}}</pre>
