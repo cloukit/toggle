@@ -12,6 +12,6 @@ import { FormsModule } from '@angular/forms';
 @NgModule({
   imports: [ CommonModule, BrowserModule, FormsModule ],
   exports: [ CloukitToggleComponent ],
-  declarations: [ CloukitToggleComponent ]
+  declarations: [ CloukitToggleComponent ],
 })
 export class ToggleModule {}
