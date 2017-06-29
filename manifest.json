@@ -1,9 +1,9 @@
 {
   "moduleId": "toggle",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A toggle component that can be used in an Angular Reactive Form for a boolean.",
   "dependencies": {
-    "@cloukit/theme": "^1.2.8"
+    "@cloukit/theme": "^1.2.10"
   },
   "devDependencies": {
   },

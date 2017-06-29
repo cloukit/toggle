@@ -3,7 +3,7 @@
  * Copyright (c) 2017 Bernhard Grünewaldt - codeclou.io
  * https://github.com/cloukit/legal
  */
-import { Component, forwardRef, Optional } from '@angular/core';
+import { Component, forwardRef, Input, OnChanges, Optional } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { CloukitToggleComponentThemeDefault } from './toggle.theme';
 import {
@@ -50,10 +50,14 @@ export const CLOUKIT_TOGGLE_VALUE_ACCESSOR: any = {
   styles: [ ],
   providers: [ CLOUKIT_TOGGLE_VALUE_ACCESSOR ],
 })
-export class CloukitToggleComponent implements ControlValueAccessor {
+export class CloukitToggleComponent implements ControlValueAccessor, OnChanges {
+
+  @Input() // optional
+  theme: string;
 
   themeService: CloukitThemeService;
-  theme: CloukitComponentTheme;
+  themeServiceFromExternal: boolean = false;
+  themeSelected: CloukitComponentTheme;
   state = {
     internalValue: false,
     isDisabled: false,
@@ -62,7 +66,7 @@ export class CloukitToggleComponent implements ControlValueAccessor {
   };
 
   getStyle(element: string): CloukitStatefulAndModifierAwareElementThemeStyleDefinition {
-    const style = this.theme.getStyle(element, this.state.uiState, this.state.uiModifier);
+    const style = this.themeSelected.getStyle(element, this.state.uiState, this.state.uiModifier);
     return this.themeService.prefixStyle(style);
   }
 
@@ -87,10 +91,19 @@ export class CloukitToggleComponent implements ControlValueAccessor {
     if (themeService === null) {
       this.themeService = new CloukitThemeService();
       this.themeService.registerComponentTheme('toggle', new CloukitToggleComponentThemeDefault());
+      this.themeServiceFromExternal = false;
     } else {
       this.themeService = themeService;
+      this.themeServiceFromExternal = true;
     }
-    this.theme = this.themeService.getComponentTheme('toggle');
+    this.themeSelected = this.themeService.getComponentTheme('toggle');
+  }
+
+  ngOnChanges() {
+    console.log('THEME', this.theme);
+    if (this.theme !== undefined && this.theme !== null && this.themeServiceFromExternal) {
+      this.themeSelected = this.themeService.getComponentTheme(this.theme);
+    }
   }
 
   // @Overrides -> ControlValueAccessor
