@@ -8,3 +8,14 @@ Use toggle inside your [Reactive Forms](https://angular.io/guide/reactive-forms)
   formControlName="isCatDead"
 ></cloukit-toggle>
 ```
+
+And if you want to use a specific theme use:
+
+```html
+<cloukit-toggle
+  formControlName="isCatDead"
+  theme="toggle-custom"
+></cloukit-toggle>
+```
+
+But make sure you register that theme in the themeService properly.
