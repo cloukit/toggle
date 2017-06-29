@@ -23,6 +23,15 @@ import { FormGroup, FormBuilder } from '@angular/forms';
       formControlName="isCatDead"
     ></cloukit-toggle>
 
+    <br><br>
+
+    With differen theme: <br><br>
+
+    <cloukit-toggle
+      formControlName="isCatDead"
+      theme="toggle--cornered"
+    ></cloukit-toggle>
+
     <br><br><hr><br><br>
 
     Reactive Form Result:
