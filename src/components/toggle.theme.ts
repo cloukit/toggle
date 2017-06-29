@@ -30,6 +30,12 @@ export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
       }
     } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition);
 
+    this.createStyle('wrapper', 'untoggled', 'disabled', this.merge(this.getStyle('wrapper', 'untoggled', 'base'), {
+      style: {
+        cursor: 'not-allowed',
+      }
+    } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+
     this.createStyle('circle', 'untoggled', 'base', {
       style: {
         borderRadius: '50%',
@@ -42,6 +48,12 @@ export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
         transition: 'left 300ms linear',
       }
     } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition);
+
+    this.createStyle('circle', 'untoggled', 'disabled', this.merge(this.getStyle('circle', 'untoggled', 'base'), {
+      style: {
+        backgroundColor: '#a8a8a8',
+      }
+    } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
 
     this.createStyle('iconLeft', 'untoggled', 'base', {
       style: {
@@ -59,6 +71,16 @@ export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
       }
     } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition);
 
+    this.createStyle('iconLeft', 'untoggled', 'disabled', this.merge(this.getStyle('iconLeft', 'untoggled', 'base'), {
+      style: {
+      },
+      icon: {
+        svgStyle: {
+          fill: '#a8a8a8',
+        }
+      }
+    } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+
     this.createStyle('iconRight', 'untoggled', 'base', {
       style: {
         width: '20px',
@@ -75,6 +97,11 @@ export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
       }
     } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition);
 
+    this.createStyle('iconRight', 'untoggled', 'disabled', this.merge(this.getStyle('iconRight', 'untoggled', 'base'), {
+      style: {
+      }
+    } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+
     //
     // TOGGLED
     //
@@ -84,10 +111,22 @@ export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
       }
     } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
 
+    this.createStyle('wrapper', 'toggled', 'disabled', this.merge(this.getStyle('wrapper', 'toggled', 'base'), {
+      style: {
+        cursor: 'not-allowed',
+        backgroundColor: '#206D1E',
+      }
+    } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
 
     this.createStyle('circle', 'toggled', 'base', this.merge(this.getStyle('circle', 'untoggled', 'base'), {
       style: {
-        left: '24px'
+        left: '24px',
+      }
+    } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+
+    this.createStyle('circle', 'toggled', 'disabled', this.merge(this.getStyle('circle', 'toggled', 'base'), {
+      style: {
+        backgroundColor: '#a8a8a8',
       }
     } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
 
@@ -97,9 +136,24 @@ export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
       }
     } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
 
+    this.createStyle('iconLeft', 'toggled', 'disabled', this.merge(this.getStyle('iconLeft', 'toggled', 'base'), {
+      style: {
+      },
+      icon: {
+        svgStyle: {
+          fill: '#a8a8a8',
+        }
+      }
+    } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+
     this.createStyle('iconRight', 'toggled', 'base', this.merge(this.getStyle('iconRight', 'untoggled', 'base'), {
       style: {
         display: 'none',
+      }
+    } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+
+    this.createStyle('iconRight', 'toggled', 'disabled', this.merge(this.getStyle('iconRight', 'toggled', 'base'), {
+      style: {
       }
     } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
   }
@@ -119,6 +173,12 @@ export class CloukitToggleComponentThemeCornered extends CloukitToggleComponentT
     const circleUntoggledBase = this.getElementTheme('circle', 'untoggled', 'base');
     circleUntoggledBase.styleDef.style.borderRadius = '1px';
 
+    const wrapperUntoggledDisabled = this.getElementTheme('wrapper', 'untoggled', 'disabled');
+    wrapperUntoggledDisabled.styleDef.style.borderRadius = '1px';
+
+    const circleUntoggledDisabled= this.getElementTheme('circle', 'untoggled', 'disabled');
+    circleUntoggledDisabled.styleDef.style.borderRadius = '1px';
+
     //
     // TOGGLED
     //
@@ -127,5 +187,11 @@ export class CloukitToggleComponentThemeCornered extends CloukitToggleComponentT
 
     const circleToggledBase = this.getElementTheme('circle', 'toggled', 'base');
     circleToggledBase.styleDef.style.borderRadius = '1px';
+
+    const wrapperToggledDisabled = this.getElementTheme('wrapper', 'toggled', 'disabled');
+    wrapperToggledDisabled.styleDef.style.borderRadius = '1px';
+
+    const circleToggledDisabled = this.getElementTheme('circle', 'toggled', 'disabled');
+    circleToggledDisabled.styleDef.style.borderRadius = '1px';
   }
 }
