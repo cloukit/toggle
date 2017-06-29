@@ -3,12 +3,17 @@
   "status": "EXPERIMENTAL",
   "versions": [
     {
-      "version": "1.1.0",
-      "modules": [ "CloukitToggleModule" ]
-    },
-    {
-      "version": "1.2.0",
-      "modules": [ "CloukitToggleModule" ]
+      "version": "1.2.2",
+      "themes": [
+        {
+          "class": "CloukitToggleComponentThemeCornered",
+          "description": "Square edges"
+        },
+        {
+          "class": "CloukitToggleComponentThemeDefault",
+          "description": "Rounded edges"
+        }
+      ]
     }
   ]
 }
