@@ -6,7 +6,7 @@ import { FormsModule }   from '@angular/forms';
 import { AppComponent } from './app.component';
 import { PreviewComponent } from './preview.component';
 import prefixAll from 'inline-style-prefixer/static';
-import { ToggleModule, CloukitToggleComponentThemeDefault } from '@cloukit/toggle';
+import { CloukitToggleModule, CloukitToggleComponentThemeDefault } from '@cloukit/toggle';
 import { CloukitThemeService } from '@cloukit/theme';
 
 @Injectable()
@@ -14,7 +14,6 @@ export class MyThemeService extends CloukitThemeService {
   constructor() {
     super();
     const myToggleTheme = new CloukitToggleComponentThemeDefault();
-    console.log(prefixAll({ userSelect: 'none' }));
     this.registerPrefixer(prefixAll);
     this.registerComponentTheme('toggle', myToggleTheme);
   }
@@ -26,7 +25,7 @@ export class MyThemeService extends CloukitThemeService {
     FormsModule,
     CommonModule,
     ReactiveFormsModule,
-    ToggleModule,
+    CloukitToggleModule
   ],
   declarations: [
     AppComponent,
