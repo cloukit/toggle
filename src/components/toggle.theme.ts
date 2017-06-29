@@ -105,3 +105,27 @@ export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
   }
 
 }
+
+export class CloukitToggleComponentThemeCornered extends CloukitToggleComponentThemeDefault {
+
+  constructor() {
+    super();
+    //
+    // UNTOGGLED
+    //
+    const wrapperUntoggledBase = this.getElementTheme('wrapper', 'untoggled', 'base');
+    wrapperUntoggledBase.styleDef.style.borderRadius = '1px';
+
+    const circleUntoggledBase = this.getElementTheme('circle', 'untoggled', 'base');
+    circleUntoggledBase.styleDef.style.borderRadius = '1px';
+
+    //
+    // TOGGLED
+    //
+    const wrapperToggledBase = this.getElementTheme('wrapper', 'toggled', 'base');
+    wrapperToggledBase.styleDef.style.borderRadius = '1px';
+
+    const circleToggledBase = this.getElementTheme('circle', 'toggled', 'base');
+    circleToggledBase.styleDef.style.borderRadius = '1px';
+  }
+}
