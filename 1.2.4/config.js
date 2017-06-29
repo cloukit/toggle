@@ -27,7 +27,7 @@ System.config({
     'inline-style-prefixer/static': 'npm:inline-style-prefixer@3.0.1/dist/inline-style-prefix-all.min.js',
 
     '@cloukit/theme': 'npm:@cloukit/theme@1.2.11/theme.es5.js',
-    '@cloukit/toggle': 'npm:@cloukit/toggle@1.2.2/toggle.es5.js',
+    '@cloukit/toggle': 'npm:@cloukit/toggle@1.2.4/toggle.es5.js',
 
 
     'rxjs': 'npm:rxjs@5.1.0',

@@ -3,7 +3,7 @@
   "status": "EXPERIMENTAL",
   "versions": [
     {
-      "version": "1.2.2",
+      "version": "1.2.4",
       "themes": [
         {
           "class": "CloukitToggleComponentThemeCornered",
