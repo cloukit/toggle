@@ -52,7 +52,10 @@ export const CLOUKIT_TOGGLE_VALUE_ACCESSOR: any = {
 })
 export class CloukitToggleComponent implements ControlValueAccessor, OnChanges {
 
-  @Input() // optional
+  /*
+   * Optional theme selector
+   */
+  @Input()
   theme: string;
 
   themeService: CloukitThemeService;
