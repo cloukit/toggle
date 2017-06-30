@@ -7,6 +7,9 @@ import {
   CloukitComponentTheme, CloukitIcons, CloukitStatefulAndModifierAwareElementThemeStyleDefinition
 } from '@cloukit/theme';
 
+/**
+ * The default theme with round edges.
+ */
 export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
 
   constructor() {
@@ -160,6 +163,9 @@ export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
 
 }
 
+/**
+ * The cornered theme with square edges.
+ */
 export class CloukitToggleComponentThemeCornered extends CloukitToggleComponentThemeDefault {
 
   constructor() {
