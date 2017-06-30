@@ -165,7 +165,8 @@ export class CloukitToggleComponent implements ControlValueAccessor, OnChanges {
   /**
    * @overrides ControlValueAccessor
    * @hidden
-   */  registerOnTouched(fn: any): void {
+   */
+  registerOnTouched(fn: any): void {
     this.onTouchedCallback = fn;
     this.updateUiModifierAndState();
   }
@@ -173,7 +174,8 @@ export class CloukitToggleComponent implements ControlValueAccessor, OnChanges {
   /**
    * @overrides ControlValueAccessor
    * @hidden
-   */  setValue(value: boolean) {
+   */
+  setValue(value: boolean) {
     if (value !== this.state.internalValue) {
       this.state.internalValue = value;
       this.onChangeCallback(value);
@@ -184,7 +186,8 @@ export class CloukitToggleComponent implements ControlValueAccessor, OnChanges {
   /**
    * @overrides ControlValueAccessor
    * @hidden
-   */  getValue(): boolean {
+   */
+  getValue(): boolean {
     return this.state.internalValue;
   }
 
