@@ -8,7 +8,7 @@ import {
 } from '@cloukit/theme';
 
 /**
- * The default theme with round edges.
+ * The default theme with round edges. It is used per default even when there is no CloukitThemeService provided.
  */
 export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
 
@@ -164,7 +164,8 @@ export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
 }
 
 /**
- * The cornered theme with square edges.
+ * The cornered theme with square edges. See the [Themeing Guide]{@link https://cloukit.github.io/#/guide/themeing} on how to
+ * use other themes like `cornered`.
  */
 export class CloukitToggleComponentThemeCornered extends CloukitToggleComponentThemeDefault {
 
