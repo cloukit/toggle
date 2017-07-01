@@ -4,9 +4,13 @@
 Use toggle inside your [Reactive Forms](https://angular.io/guide/reactive-forms) like so.
 
 ```html
-<cloukit-toggle
-  formControlName="isCatDead"
-></cloukit-toggle>
+<form [formGroup]="form">
+  ...
+  <cloukit-toggle
+    formControlName="isCatDead"
+  ></cloukit-toggle>
+  ...
+</form>
 ```
 
 And if you want to use a specific theme use:
