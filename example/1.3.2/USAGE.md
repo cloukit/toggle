@@ -22,7 +22,7 @@ And if you want to use a specific theme use:
 ></cloukit-toggle>
 ```
 
-But make sure you register that theme in the themeService properly.
+But make sure you register that theme in the [`CloukitThemeService`](https://cloukit.github.io/#/component/theme) properly.
 
 
 Of yourse you will need to import the `CloukitToggleModule` and inject it into your main `NgModule`.
