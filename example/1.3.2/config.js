@@ -22,7 +22,6 @@ System.config({
     '@angular/platform-browser-dynamic/testing': 'npm:@angular/platform-browser-dynamic@4.0.0/bundles/platform-browser-dynamic-testing.umd.js',
     '@angular/http/testing': 'npm:@angular/http@4.0.0/bundles/http-testing.umd.js',
     '@angular/router/testing': 'npm:@angular/router@4.0.0/bundles/router-testing.umd.js',
-
     /* PREFIXER */
     'inline-style-prefixer/static': 'npm:inline-style-prefixer@3.0.1/dist/inline-style-prefix-all.min.js',
 
