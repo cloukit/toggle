@@ -6,7 +6,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
   templateUrl: './src/preview.component.html',
   styles: [
     '.preview { font-family:sans-serif' ,
-    '.demotable td { vertical-align:top; padding-bottom:15px; padding-right:10px; }',
+    '.demotable td { vertical-align:top; padding:10px; }',
   ],
 })
 export class PreviewComponent {
