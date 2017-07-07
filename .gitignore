@@ -5,3 +5,5 @@ build
 dist
 library-build-chain
 documentation
+src/*.js
+src/components/*.js

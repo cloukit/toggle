@@ -1,0 +1,30 @@
+{
+  "COMMENT": "THIS FILE WILL BE PARSED DURING BUILD. IT IS NOT THE ACTUAL PACKAGE FILE PUSHE TO NPMJS!",
+  "name": "@cloukit/toggle",
+  "version": "1.4.0",
+  "description": "A toggle component that can be used in an Angular Reactive Form for a boolean.",
+  "license": "MIT",
+  "author": "codelcou.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cloukit/toggle.git"
+  },
+  "scripts": {
+    "build": "node ./node_modules/@cloukit/library-build-chain/build.js",
+    "watch": "node ./node_modules/@cloukit/library-build-chain/build.js --watch"
+  },
+  "dependencies": {
+    "@cloukit/theme": "^1.3.0"
+  },
+  "devDependencies": {
+    "@cloukit/library-build-chain": "http://github-proxy.home.codeclou.io/cloukit/library-build-chain/archive/master.tar.gz?t=7"
+  },
+  "peerDependencies": {
+    "@angular/common": "^4.0.1",
+    "@angular/core": "^4.0.1",
+    "@angular/forms": "^4.0.1",
+    "@angular/platform-browser": "^4.0.1",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  }
+}
