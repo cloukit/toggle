@@ -14,6 +14,19 @@
           "description": "Rounded edges"
         }
       ]
+    },
+    {
+      "version": "1.4.0",
+      "themes": [
+        {
+          "class": "CloukitToggleComponentThemeCornered",
+          "description": "Square edges"
+        },
+        {
+          "class": "CloukitToggleComponentThemeDefault",
+          "description": "Rounded edges"
+        }
+      ]
     }
   ]
 }
