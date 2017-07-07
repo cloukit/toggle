@@ -118,9 +118,9 @@
   dependencies:
     tsickle "^0.21.0"
 
-"@cloukit/library-build-chain@http://github-proxy.home.codeclou.io/cloukit/library-build-chain/archive/master.tar.gz?t=8":
-  version "1.2.0"
-  resolved "http://github-proxy.home.codeclou.io/cloukit/library-build-chain/archive/master.tar.gz?t=8#1d274ea7b79677f5ce64b85e30206b87adfd7db8"
+"@cloukit/library-build-chain@1.3.0":
+  version "1.3.0"
+  resolved "http://npm-proxy.home.codeclou.io/@cloukit/library-build-chain/-/library-build-chain-1.3.0.tgz#f37fe735b6664bc0885790c248b734b3c5ddac05"
   dependencies:
     "@angular/cli" "1.2.0"
     "@angular/common" "^4.0.1"

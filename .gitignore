@@ -7,3 +7,4 @@ library-build-chain
 documentation
 src/*.js
 src/components/*.js
+tsconfig-*.json
