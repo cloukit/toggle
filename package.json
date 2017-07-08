@@ -2,7 +2,7 @@
   "COMMENT": "THIS FILE WILL BE PARSED DURING BUILD. IT IS NOT THE ACTUAL PACKAGE FILE PUSHE TO NPMJS!",
   "name": "@cloukit/toggle",
   "moduleId": "toggle",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "A toggle component that can be used in an Angular Reactive Form for a boolean.",
   "license": "MIT",
   "author": "codelcou.io",
@@ -15,7 +15,7 @@
     "watch": "node ./node_modules/@cloukit/library-build-chain/build.js --watch"
   },
   "dependencies": {
-    "@cloukit/theme": "^1.3.0"
+    "@cloukit/theme": "^1.4.0"
   },
   "devDependencies": {
     "@cloukit/library-build-chain": "1.3.0"

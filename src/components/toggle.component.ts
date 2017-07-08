@@ -71,7 +71,7 @@ export class CloukitToggleComponent implements ControlValueAccessor, OnChanges {
    * ```
    */
   @Input()
-  theme: string;
+  public theme: string;
 
   private themeService: CloukitThemeService;
   private themeServiceFromExternal: boolean = false;
@@ -95,12 +95,12 @@ export class CloukitToggleComponent implements ControlValueAccessor, OnChanges {
     this.themeSelected = this.themeService.getComponentTheme('toggle');
   }
 
-  private getStyle(element: string): CloukitStatefulAndModifierAwareElementThemeStyleDefinition {
+  public getStyle(element: string): CloukitStatefulAndModifierAwareElementThemeStyleDefinition {
     const style = this.themeSelected.getStyle(element, this.state.uiState, this.state.uiModifier);
     return this.themeService.prefixStyle(style);
   }
 
-  private updateUiModifierAndState() {
+  public updateUiModifierAndState() {
     if (this.state.isDisabled) {
       this.state.uiModifier = 'disabled';
     } else {
@@ -113,7 +113,7 @@ export class CloukitToggleComponent implements ControlValueAccessor, OnChanges {
     }
   }
 
-  private toggleValue() {
+  public toggleValue() {
     if (!this.state.isDisabled) {
       this.setValue(!this.state.internalValue);
     }
