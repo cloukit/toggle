@@ -24,7 +24,11 @@ export const CLOUKIT_TOGGLE_VALUE_ACCESSOR: any = {
  * Just use this inside your templates:
  *
  * ```html
- * <cloukit-toggle formControlName="foo"></cloukit-toggle>
+ * <cloukit-pagination
+ *   [total]="totalPages"
+ *   [current]="currentPage"
+ *   (onPageSelect)="selectPage($event)"
+ * ></cloukit-pagination>
  * ```
  */
 @Component({
