@@ -3,20 +3,7 @@
   "status": "EXPERIMENTAL",
   "versions": [
     {
-      "version": "1.3.2",
-      "themes": [
-        {
-          "class": "CloukitToggleComponentThemeCornered",
-          "description": "Square edges"
-        },
-        {
-          "class": "CloukitToggleComponentThemeDefault",
-          "description": "Rounded edges"
-        }
-      ]
-    },
-    {
-      "version": "1.4.0",
+      "version": "1.5.0",
       "themes": [
         {
           "class": "CloukitToggleComponentThemeCornered",
