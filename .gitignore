@@ -8,3 +8,6 @@ documentation
 src/*.js
 src/components/*.js
 tsconfig-*.json
+yarn.lock
+_dist_demo_node_modules
+dist-demo
