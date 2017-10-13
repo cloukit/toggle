@@ -3,9 +3,8 @@
  * Copyright (c) 2017 Bernhard Grünewaldt - codeclou.io
  * https://github.com/cloukit/legal
  */
-import { Component, forwardRef, Input, OnChanges, Optional } from '@angular/core';
+import { Component, forwardRef, Input, OnChanges } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { CloukitToggleComponentThemeDefault } from './toggle.theme';
 import {
   CloukitComponentTheme, CloukitStatefulAndModifierAwareElementThemeStyleDefinition,
   CloukitThemeService
@@ -77,8 +76,6 @@ export class CloukitToggleComponent implements ControlValueAccessor, OnChanges {
   @Input()
   public theme: string;
 
-  private themeService: CloukitThemeService;
-  private themeServiceFromExternal: boolean = false;
   private themeSelected: CloukitComponentTheme;
   private state = {
     internalValue: false,
@@ -87,21 +84,16 @@ export class CloukitToggleComponent implements ControlValueAccessor, OnChanges {
     uiState: 'untoggled',
   };
 
-  constructor(@Optional() themeService: CloukitThemeService) {
-    if (themeService === null) {
-      this.themeService = new CloukitThemeService();
-      this.themeService.registerComponentTheme('toggle', new CloukitToggleComponentThemeDefault());
-      this.themeServiceFromExternal = false;
-    } else {
-      this.themeService = themeService;
-      this.themeServiceFromExternal = true;
-    }
+  constructor(private themeService: CloukitThemeService) {
     this.themeSelected = this.themeService.getComponentTheme('toggle');
   }
 
   public getStyle(element: string): CloukitStatefulAndModifierAwareElementThemeStyleDefinition {
-    const style = this.themeSelected.getStyle(element, this.state.uiState, this.state.uiModifier);
-    return this.themeService.prefixStyle(style);
+    if (this.themeSelected !== undefined && this.themeSelected !== null) {
+      const style = this.themeSelected.getStyle(element, this.state.uiState, this.state.uiModifier);
+      return this.themeService.prefixStyle(style);
+    }
+    return { style: {}, icon: {} } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition;
   }
 
   public updateUiModifierAndState() {
@@ -132,9 +124,12 @@ export class CloukitToggleComponent implements ControlValueAccessor, OnChanges {
    * @hidden
    */
   ngOnChanges() {
-    console.log('THEME', this.theme);
-    if (this.theme !== undefined && this.theme !== null && this.themeServiceFromExternal) {
+    if (this.theme !== undefined && this.theme !== null) {
       this.themeSelected = this.themeService.getComponentTheme(this.theme);
+      if (this.themeSelected === null) {
+        console.log(`WARN: requested theme ${this.theme} does not exist. Falling back to default theme for toggle.`);
+        this.themeSelected = this.themeService.getComponentTheme('toggle');
+      }
     }
   }
 
