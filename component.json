@@ -4,16 +4,7 @@
   "versions": [
     {
       "version": "1.6.0",
-      "themes": [
-        {
-          "class": "CloukitToggleComponentThemeCornered",
-          "description": "Square edges"
-        },
-        {
-          "class": "CloukitToggleComponentThemeDefault",
-          "description": "Rounded edges"
-        }
-      ]
+      "hasTheme": true
     }
   ]
 }
