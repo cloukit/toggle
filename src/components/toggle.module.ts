@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 import { CloukitToggleComponent } from './toggle.component';
 import { FormsModule } from '@angular/forms';
 import { CloukitThemeService } from '@cloukit/theme';
-import { CloukitToggleComponentThemeDefault } from './toggle.theme';
+import { CloukitToggleComponentThemeCornered, CloukitToggleComponentThemeDefault } from './toggle.theme';
 
 @NgModule({
   imports: [ CommonModule, FormsModule ],
@@ -19,6 +19,9 @@ export class CloukitToggleModule {
   constructor(private themeService: CloukitThemeService) {
     if (this.themeService.getComponentTheme('toggle') === null) {
       this.themeService.registerComponentTheme('toggle', new CloukitToggleComponentThemeDefault());
+    }
+    if (this.themeService.getComponentTheme('toggle--cornered') === null) {
+      this.themeService.registerComponentTheme('toggle--cornered', new CloukitToggleComponentThemeCornered());
     }
   }
 }

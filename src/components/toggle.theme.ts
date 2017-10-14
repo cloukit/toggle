@@ -8,7 +8,7 @@ import {
 } from '@cloukit/theme';
 
 /**
- * The default theme with round edges. It is used per default even when there is no CloukitThemeService provided.
+ * The default theme with round edges. It is used as default.
  */
 export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
 
@@ -33,11 +33,12 @@ export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
       }
     } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition);
 
-    this.createStyle('wrapper', 'untoggled', 'disabled', this.merge(this.getStyle('wrapper', 'untoggled', 'base'), {
-      style: {
-        cursor: 'not-allowed',
-      }
-    } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+    this.createStyle('wrapper', 'untoggled', 'disabled',
+      this.merge(this.getStyle('wrapper', 'untoggled', 'base'), {
+        style: {
+          cursor: 'not-allowed',
+        }
+      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
 
     this.createStyle('circle', 'untoggled', 'base', {
       style: {
@@ -52,11 +53,12 @@ export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
       }
     } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition);
 
-    this.createStyle('circle', 'untoggled', 'disabled', this.merge(this.getStyle('circle', 'untoggled', 'base'), {
-      style: {
-        backgroundColor: '#a8a8a8',
-      }
-    } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+    this.createStyle('circle', 'untoggled', 'disabled',
+      this.merge(this.getStyle('circle', 'untoggled', 'base'), {
+        style: {
+          backgroundColor: '#a8a8a8',
+        }
+      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
 
     this.createStyle('iconLeft', 'untoggled', 'base', {
       style: {
@@ -74,15 +76,16 @@ export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
       }
     } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition);
 
-    this.createStyle('iconLeft', 'untoggled', 'disabled', this.merge(this.getStyle('iconLeft', 'untoggled', 'base'), {
-      style: {
-      },
-      icon: {
-        svgStyle: {
-          fill: '#a8a8a8',
+    this.createStyle('iconLeft', 'untoggled', 'disabled',
+      this.merge(this.getStyle('iconLeft', 'untoggled', 'base'), {
+        style: {
+        },
+        icon: {
+          svgStyle: {
+            fill: '#a8a8a8',
+          }
         }
-      }
-    } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
 
     this.createStyle('iconRight', 'untoggled', 'base', {
       style: {
@@ -100,71 +103,81 @@ export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
       }
     } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition);
 
-    this.createStyle('iconRight', 'untoggled', 'disabled', this.merge(this.getStyle('iconRight', 'untoggled', 'base'), {
-      style: {
-      }
-    } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+    this.createStyle('iconRight', 'untoggled', 'disabled',
+      this.merge(this.getStyle('iconRight', 'untoggled', 'base'), {
+        style: {
+        }
+      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
 
     //
     // TOGGLED
     //
-    this.createStyle('wrapper', 'toggled', 'base', this.merge(this.getStyle('wrapper', 'untoggled', 'base'), {
-      style: {
-        backgroundColor: '#3FB13D',
-      }
-    } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
-
-    this.createStyle('wrapper', 'toggled', 'disabled', this.merge(this.getStyle('wrapper', 'toggled', 'base'), {
-      style: {
-        cursor: 'not-allowed',
-        backgroundColor: '#206D1E',
-      }
-    } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
-
-    this.createStyle('circle', 'toggled', 'base', this.merge(this.getStyle('circle', 'untoggled', 'base'), {
-      style: {
-        left: '24px',
-      }
-    } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
-
-    this.createStyle('circle', 'toggled', 'disabled', this.merge(this.getStyle('circle', 'toggled', 'base'), {
-      style: {
-        backgroundColor: '#a8a8a8',
-      }
-    } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
-
-    this.createStyle('iconLeft', 'toggled', 'base', this.merge(this.getStyle('iconLeft', 'untoggled', 'base'), {
-      style: {
-        display: 'inline-block',
-      }
-    } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
-
-    this.createStyle('iconLeft', 'toggled', 'disabled', this.merge(this.getStyle('iconLeft', 'toggled', 'base'), {
-      style: {
-      },
-      icon: {
-        svgStyle: {
-          fill: '#a8a8a8',
+    this.createStyle('wrapper', 'toggled', 'base',
+      this.merge(this.getStyle('wrapper', 'untoggled', 'base'), {
+        style: {
+          backgroundColor: '#3FB13D',
         }
-      }
-    } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
 
-    this.createStyle('iconRight', 'toggled', 'base', this.merge(this.getStyle('iconRight', 'untoggled', 'base'), {
-      style: {
-        display: 'none',
-      }
-    } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+    this.createStyle('wrapper', 'toggled', 'disabled',
+      this.merge(this.getStyle('wrapper', 'toggled', 'base'), {
+        style: {
+          cursor: 'not-allowed',
+          backgroundColor: '#206D1E',
+        }
+      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
 
-    this.createStyle('iconRight', 'toggled', 'disabled', this.merge(this.getStyle('iconRight', 'toggled', 'base'), {
-      style: {
-      }
-    } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+    this.createStyle('circle', 'toggled', 'base',
+      this.merge(this.getStyle('circle', 'untoggled', 'base'), {
+        style: {
+          left: '24px',
+        }
+      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+
+    this.createStyle('circle', 'toggled', 'disabled',
+      this.merge(this.getStyle('circle', 'toggled', 'base'), {
+        style: {
+          backgroundColor: '#a8a8a8',
+        }
+      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+
+    this.createStyle('iconLeft', 'toggled', 'base',
+      this.merge(this.getStyle('iconLeft', 'untoggled', 'base'), {
+        style: {
+          display: 'inline-block',
+        }
+      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+
+    this.createStyle('iconLeft', 'toggled', 'disabled',
+      this.merge(this.getStyle('iconLeft', 'toggled', 'base'), {
+        style: {
+        },
+        icon: {
+          svgStyle: {
+            fill: '#a8a8a8',
+          }
+        }
+      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+
+    this.createStyle('iconRight', 'toggled', 'base',
+      this.merge(this.getStyle('iconRight', 'untoggled', 'base'), {
+        style: {
+          display: 'none',
+        }
+      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+
+    this.createStyle('iconRight', 'toggled', 'disabled',
+      this.merge(this.getStyle('iconRight', 'toggled', 'base'), {
+        style: {
+        }
+      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
   }
 
 }
 
 /**
- * The cornered theme with square edges. See the [Themeing Guide]{@link https://cloukit.github.io/#/guide/themeing} on how to
+ * The cornered theme with square edges. See the
+ * [Themeing Guide]{@link https://cloukit.github.io/#/guide/themeing} on how to
  * use other themes like `cornered`.
  */
 export class CloukitToggleComponentThemeCornered extends CloukitToggleComponentThemeDefault {

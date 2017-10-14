@@ -4,7 +4,10 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 @Component({
   selector: 'demo',
   templateUrl: './demo.component.html',
-  styles: [ '.demo { font-family: sans-serif; }', '.demotable td { vertical-align:top; padding:10px; }', ],
+  styles: [
+    '.demo { font-family: sans-serif; }',
+    '.demotable td { vertical-align:top; padding:10px; }',
+  ],
 })
 export class DemoComponent {
   styles = { };
@@ -19,7 +22,6 @@ export class DemoComponent {
       youCantTouchThisOnAlt: { value: true, disabled: true },
       youCantTouchThisOffAlt: { value: false, disabled: true },
     });
-
   }
 
   getFormResult() {
