@@ -3,9 +3,9 @@ This graphic shows you all elements with their states and modifiers.
 
 ![](https://cloukit.github.io/toggle/themeing/toggle-component-decomposed.svg)
 
-Below you can see the two themes provided by toggle. You can easily extend one of the esiting themes and change it to your needs. But do not forget to register it at the [`cloukitThemeService`](https://cloukit.github.io/#/guide/themeing).
+Below you can see the two themes provided by toggle. You can easily extend one of the existing themes and change it to your needs. But do not forget to register it at the [`cloukitThemeService`](https://cloukit.github.io/#/guide/themeing).
 
-An easy new theme would be like so:
+A new theme with a red outline would be created like so:
 
 ```typescript
 import { CloukitToggleComponentThemeDefault } from '@cloukit/theme';
@@ -14,7 +14,7 @@ export class MyRedToggleTheme extends CloukitToggleComponentThemeDefault {
   constructor() {
     super();
     const wrapperUntoggledBase = this.getElementTheme('wrapper', 'untoggled', 'base');
-    wrapperUntoggledBase.styleDef.style.color = 'red';
+    wrapperUntoggledBase.styleDef.style.borderColor = 'red';
   }
 }
 ```
