@@ -8,7 +8,7 @@ Below you can see the two themes provided by toggle. You can easily extend one o
 A new theme with a red outline would be created like so:
 
 ```typescript
-import { CloukitToggleComponentThemeDefault } from '@cloukit/theme';
+import { CloukitToggleComponentThemeDefault } from '@cloukit/toggle';
 
 export class MyRedToggleTheme extends CloukitToggleComponentThemeDefault {
   constructor() {
