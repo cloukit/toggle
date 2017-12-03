@@ -40,7 +40,7 @@
     </text>
     <path d="M335.5 245.5h-73" stroke="#710ECC" opacity=".2" stroke-linecap="square"/>
     <text font-family="SourceSansPro-Light, Source Sans Pro" font-size="20" font-weight="300" letter-spacing=".333" fill="#777">
-      <tspan x="436" y="175">iconLeft</tspan>
+      <tspan x="436" y="175">iconRight</tspan>
     </text>
     <path d="M430.5 170.5h-57" stroke="#710ECC" opacity=".2" stroke-linecap="square"/>
     <text font-family="SourceSansPro-LightItalic, Source Sans Pro" font-size="20" font-style="italic" font-weight="300" letter-spacing=".333" fill="#777">
