@@ -8,6 +8,7 @@ Import the needed modules in your main module.
 ```typescript
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 import { CloukitToggleModule } from '@cloukit/toggle';
 import { CloukitThemeModule } from '@cloukit/theme';
 
@@ -17,6 +18,7 @@ import { CloukitThemeModule } from '@cloukit/theme';
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     CloukitThemeModule,
     CloukitToggleModule,
   ],
