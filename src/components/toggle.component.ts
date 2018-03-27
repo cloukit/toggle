@@ -33,6 +33,8 @@ export const CLOUKIT_TOGGLE_VALUE_ACCESSOR: any = {
   template: `
     <div
       (click)="toggleValue()"
+      (mouseenter)="handleMouseEnter()"
+      (mouseleave)="handleMouseLeave()"
       [ngStyle]="getStyle('wrapper').style"
     >
       <div
@@ -76,6 +78,7 @@ export class CloukitToggleComponent implements ControlValueAccessor, OnChanges {
 
   private themeSelected: CloukitComponentTheme;
   private state = {
+    mouseOver: false,
     internalValue: false,
     isDisabled: false,
     uiModifier: 'base',
@@ -98,13 +101,29 @@ export class CloukitToggleComponent implements ControlValueAccessor, OnChanges {
     if (this.state.isDisabled) {
       this.state.uiModifier = 'disabled';
     } else {
-      this.state.uiModifier = 'base';
+      // Only set hover if not disabled!
+      // Disabled wins over hover as modifier!
+      if (this.state.mouseOver) {
+        this.state.uiModifier = 'hover';
+      } else {
+        this.state.uiModifier = 'base';
+      }
     }
     if (this.state.internalValue) {
       this.state.uiState = 'toggled'
     } else {
       this.state.uiState = 'untoggled';
     }
+  }
+
+  public handleMouseEnter() {
+    this.state.mouseOver = true;
+    this.updateUiModifierAndState();
+  }
+
+  public handleMouseLeave() {
+    this.state.mouseOver = false;
+    this.updateUiModifierAndState();
   }
 
   public toggleValue() {

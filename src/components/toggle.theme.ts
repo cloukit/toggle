@@ -40,6 +40,13 @@ export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
         }
       } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
 
+    this.createStyle('wrapper', 'untoggled', 'hover',
+      this.merge(this.getStyle('wrapper', 'untoggled', 'base'), {
+        style: {
+          border: '1px solid #333',
+        }
+      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+
     this.createStyle('circle', 'untoggled', 'base', {
       style: {
         borderRadius: '50%',
@@ -57,6 +64,12 @@ export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
       this.merge(this.getStyle('circle', 'untoggled', 'base'), {
         style: {
           backgroundColor: '#a8a8a8',
+        }
+      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+
+    this.createStyle('circle', 'untoggled', 'hover',
+      this.merge(this.getStyle('circle', 'untoggled', 'base'), {
+        style: {
         }
       } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
 
@@ -89,6 +102,12 @@ export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
         }
       } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
 
+    this.createStyle('iconLeft', 'untoggled', 'hover',
+      this.merge(this.getStyle('iconLeft', 'untoggled', 'base'), {
+        style: { },
+        icon: { }
+      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+
     this.createStyle('iconRight', 'untoggled', 'base', {
       style: {
         width: '20px',
@@ -112,6 +131,12 @@ export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
         }
       } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
 
+    this.createStyle('iconRight', 'untoggled', 'hover',
+      this.merge(this.getStyle('iconRight', 'untoggled', 'base'), {
+        style: {
+        }
+      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+
     //
     // TOGGLED
     //
@@ -130,6 +155,13 @@ export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
         }
       } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
 
+    this.createStyle('wrapper', 'toggled', 'hover',
+      this.merge(this.getStyle('wrapper', 'toggled', 'base'), {
+        style: {
+          border: '1px solid #333',
+        }
+      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+
     this.createStyle('circle', 'toggled', 'base',
       this.merge(this.getStyle('circle', 'untoggled', 'base'), {
         style: {
@@ -141,6 +173,12 @@ export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
       this.merge(this.getStyle('circle', 'toggled', 'base'), {
         style: {
           backgroundColor: '#a8a8a8',
+        }
+      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+
+    this.createStyle('circle', 'toggled', 'hover',
+      this.merge(this.getStyle('circle', 'toggled', 'base'), {
+        style: {
         }
       } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
 
@@ -162,6 +200,12 @@ export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
         }
       } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
 
+    this.createStyle('iconLeft', 'toggled', 'hover',
+      this.merge(this.getStyle('iconLeft', 'toggled', 'base'), {
+        style: { },
+        icon: { }
+      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+
     this.createStyle('iconRight', 'toggled', 'base',
       this.merge(this.getStyle('iconRight', 'untoggled', 'base'), {
         style: {
@@ -170,6 +214,12 @@ export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
       } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
 
     this.createStyle('iconRight', 'toggled', 'disabled',
+      this.merge(this.getStyle('iconRight', 'toggled', 'base'), {
+        style: {
+        }
+      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+
+    this.createStyle('iconRight', 'toggled', 'hover',
       this.merge(this.getStyle('iconRight', 'toggled', 'base'), {
         style: {
         }
@@ -193,14 +243,20 @@ export class CloukitToggleComponentThemeCornered extends CloukitToggleComponentT
     const wrapperUntoggledBase = this.getElementTheme('wrapper', 'untoggled', 'base');
     wrapperUntoggledBase.styleDef.style.borderRadius = '1px';
 
-    const circleUntoggledBase = this.getElementTheme('circle', 'untoggled', 'base');
-    circleUntoggledBase.styleDef.style.borderRadius = '1px';
+    const wrapperUntoggledHover = this.getElementTheme('wrapper', 'untoggled', 'hover');
+    wrapperUntoggledHover.styleDef.style.borderRadius = '1px';
 
     const wrapperUntoggledDisabled = this.getElementTheme('wrapper', 'untoggled', 'disabled');
     wrapperUntoggledDisabled.styleDef.style.borderRadius = '1px';
 
-    const circleUntoggledDisabled= this.getElementTheme('circle', 'untoggled', 'disabled');
+    const circleUntoggledBase = this.getElementTheme('circle', 'untoggled', 'base');
+    circleUntoggledBase.styleDef.style.borderRadius = '1px';
+
+    const circleUntoggledDisabled = this.getElementTheme('circle', 'untoggled', 'disabled');
     circleUntoggledDisabled.styleDef.style.borderRadius = '1px';
+
+    const circleUntoggledHover = this.getElementTheme('circle', 'untoggled', 'hover');
+    circleUntoggledHover.styleDef.style.borderRadius = '1px';
 
     //
     // TOGGLED
@@ -208,13 +264,19 @@ export class CloukitToggleComponentThemeCornered extends CloukitToggleComponentT
     const wrapperToggledBase = this.getElementTheme('wrapper', 'toggled', 'base');
     wrapperToggledBase.styleDef.style.borderRadius = '1px';
 
-    const circleToggledBase = this.getElementTheme('circle', 'toggled', 'base');
-    circleToggledBase.styleDef.style.borderRadius = '1px';
+    const wrapperToggledHover = this.getElementTheme('wrapper', 'toggled', 'hover');
+    wrapperToggledHover.styleDef.style.borderRadius = '1px';
 
     const wrapperToggledDisabled = this.getElementTheme('wrapper', 'toggled', 'disabled');
     wrapperToggledDisabled.styleDef.style.borderRadius = '1px';
 
+    const circleToggledBase = this.getElementTheme('circle', 'toggled', 'base');
+    circleToggledBase.styleDef.style.borderRadius = '1px';
+
     const circleToggledDisabled = this.getElementTheme('circle', 'toggled', 'disabled');
     circleToggledDisabled.styleDef.style.borderRadius = '1px';
+
+    const circleToggledHover = this.getElementTheme('circle', 'toggled', 'hover');
+    circleToggledHover.styleDef.style.borderRadius = '1px';
   }
 }
