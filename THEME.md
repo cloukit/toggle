@@ -9,6 +9,8 @@ cloukitSvg:https://cloukit.github.io/toggle/themeing/cloukit-toggle-decomposed.s
 
 cloukitSvg:https://cloukit.github.io/toggle/themeing/cloukit-toggle-states-and-modifiers.svg
 
+**NOTE:** If the toggle is in uiModifier `disabled` and it gets hovered, the uiModifier will NOT be changed to `hover`. It will stay on `disabled`. 
+
 &nbsp;
 
 ### Write your own Theme
