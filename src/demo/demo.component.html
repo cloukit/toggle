@@ -1,55 +1,13 @@
-<div
-  class="demo"
-  [formGroup]="form"
->
-  <h3>Toggle</h3>
-  <table class="demotable">
-    <tr>
-      <td>Is Schrödingers cat dead?</td>
-      <td>
-        <cloukit-toggle
-          formControlName="isCatDead"
-        ></cloukit-toggle>
-      </td>
-    </tr>
-    <tr>
-      <td>Are you sure? (different theme)</td>
-      <td>
-        <cloukit-toggle
-          formControlName="areYouSure"
-          theme="toggle--cornered"
-        ></cloukit-toggle>
-      </td>
-    </tr>
-    <tr>
-      <td>Disabled states:</td>
-      <td>
-        <cloukit-toggle
-          formControlName="youCantTouchThisOff"
-        ></cloukit-toggle>
+<div style="padding:10px;">
 
-        <cloukit-toggle
-          formControlName="youCantTouchThisOn"
-        ></cloukit-toggle>
+  <cloukit-story title="Basic Usage" story="story-00-basic">
+    <story-00-basic></story-00-basic>
+  </cloukit-story>
 
-        <br><br>
+  <br><br>
 
-        <cloukit-toggle
-          formControlName="youCantTouchThisOffAlt"
-          theme="toggle--cornered"
-        ></cloukit-toggle>
-
-        <cloukit-toggle
-          formControlName="youCantTouchThisOnAlt"
-          theme="toggle--cornered"
-        ></cloukit-toggle>
-      </td>
-    </tr>
-  </table>
-
-  <hr><br>
-
-  Reactive Form Result:
-  <pre>{{getFormResult()}}</pre>
+  <cloukit-story title="Using Custom Theme" story="story-01-themed">
+    <story-01-themed></story-01-themed>
+  </cloukit-story>
 
 </div>

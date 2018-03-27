@@ -1,0 +1,23 @@
+<div class="demo" [formGroup]="form">
+
+  <div class="row">
+    <span>Is Schrödingers cat dead?</span>
+
+    <cloukit-toggle
+      formControlName="isCatDead"
+    ></cloukit-toggle>
+
+    <button
+      type="button"
+      (click)="toggleFormDisabled()"
+      class="superButton"
+    >{{ isFormDisabled ? 'enable' : 'disable' }} form</button>
+  </div>
+
+
+  <br><br>
+
+  Reactive Form Result:
+  <pre *ngIf="form?.value">{{form.value | json}}</pre>
+
+</div>

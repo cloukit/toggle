@@ -23,23 +23,21 @@ export const CLOUKIT_TOGGLE_VALUE_ACCESSOR: any = {
  * Just use this inside your templates:
  *
  * ```html
- * <cloukit-pagination
- *   [total]="totalPages"
- *   [current]="currentPage"
- *   (onPageSelect)="selectPage($event)"
- * ></cloukit-pagination>
+ * <cloukit-toggle
+ *   formControlName="myBoolean"
+ * ></cloukit-toggle>
  * ```
  */
 @Component({
   selector: 'cloukit-toggle',
   template: `
-    <span 
+    <div
       (click)="toggleValue()"
       [ngStyle]="getStyle('wrapper').style"
     >
-      <span
+      <div
         [ngStyle]="getStyle('circle').style"
-      ></span>
+      ></div>
       <svg
         viewBox="0 0 512 512"
         [ngStyle]="getStyle('iconLeft').style"
@@ -58,7 +56,7 @@ export const CLOUKIT_TOGGLE_VALUE_ACCESSOR: any = {
           [attr.d]="getStyle('iconRight').icon.svgPathD"
         ></path>
       </svg>
-    </span>`,
+    </div>`,
   styles: [ ],
   providers: [ CLOUKIT_TOGGLE_VALUE_ACCESSOR ],
 })

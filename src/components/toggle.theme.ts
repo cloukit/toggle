@@ -62,9 +62,11 @@ export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
 
     this.createStyle('iconLeft', 'untoggled', 'base', {
       style: {
+        position: 'absolute',
+        left: '2px',
+        top: '1px',
         width: '20px',
         display: 'none',
-        marginTop: '-1px',
       },
       icon: {
         svgPathD: CloukitIcons.success,
@@ -90,8 +92,9 @@ export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
     this.createStyle('iconRight', 'untoggled', 'base', {
       style: {
         width: '20px',
-        paddingLeft: '20px',
-        marginTop: '-1px',
+        position: 'absolute',
+        right: '2px',
+        top: '1px',
       },
       icon: {
         svgPathD: CloukitIcons.failure,
@@ -144,7 +147,7 @@ export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
     this.createStyle('iconLeft', 'toggled', 'base',
       this.merge(this.getStyle('iconLeft', 'untoggled', 'base'), {
         style: {
-          display: 'inline-block',
+          display: 'block',
         }
       } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
 
