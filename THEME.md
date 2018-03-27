@@ -3,7 +3,15 @@ This graphic shows you all elements with their states and modifiers.
 
 cloukitSvg:https://cloukit.github.io/toggle/themeing/cloukit-toggle-decomposed.svg
 
+&nbsp;
+
+### Visual & Box Elements
+
 cloukitSvg:https://cloukit.github.io/toggle/themeing/cloukit-toggle-states-and-modifiers.svg
+
+&nbsp;
+
+### Write your own Theme
 
 Below you can see the two themes provided by toggle. You can easily extend one of the existing themes and change it to your needs. But do not forget to register it at the [`cloukitThemeService`](https://cloukit.github.io/#/guide/themeing).
 
