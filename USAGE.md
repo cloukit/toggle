@@ -1,6 +1,35 @@
 <!-- !!! will be dynamically included into cloukit.github.io component doc !!! -->
 <!-- !!! DO NOT USE UNECESSARY MARRKUP THAT BREAKS THE CORPORATE DESIGN !!! -->
 
+### Initial Setup
+
+Import the needed modules in your main module.
+
+```typescript
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { CloukitToggleModule } from '@cloukit/toggle';
+import { CloukitThemeModule } from '@cloukit/theme';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    CommonModule,
+    CloukitThemeModule,
+    CloukitToggleModule,
+  ],
+  providers: [ ],
+  bootstrap: [ AppComponent ],
+})
+// ....
+```
+
+&nbsp;
+
+### Use the toggle
+
 Use toggle inside your [Reactive Forms](https://angular.io/guide/reactive-forms) like so.
 
 ```html
@@ -22,5 +51,6 @@ And if you want to use a specific theme use:
 ></cloukit-toggle>
 ```
 
-Please note that you have to import [`CloukitThemeModule`](https://cloukit.github.io/#/component/theme) and `CloukitToggleModule`.
+For more complex examples see the source code of the Demo Stories above.
+
 
