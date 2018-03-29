@@ -9,6 +9,7 @@ Import the needed modules in your main module.
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
+// (1) Package Imports toggle and theme
 import { CloukitToggleModule } from '@cloukit/toggle';
 import { CloukitThemeModule } from '@cloukit/theme';
 
@@ -19,6 +20,7 @@ import { CloukitThemeModule } from '@cloukit/theme';
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    // (2) Register Imports for toggle and theme
     CloukitThemeModule,
     CloukitToggleModule,
   ],
