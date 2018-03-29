@@ -58,3 +58,21 @@ And if you want to use a specific theme use:
 For more complex examples see the source code of the Demo Stories above.
 
 
+&nbsp;
+
+### Version Compatibility
+
+You can read the [release comments](https://github.com/cloukit/toggle/releases) for full details.
+
+Please mind the the compatibility chart
+
+| Angular Version | Cloukit Component Version |
+|-----------------|---------------------------|
+| >=5.0.0         | 1.8.0 - current           |
+| >=4.0.0         | 1.0.0 - 1.7.0             |
+
+To install a specific version use:
+
+```
+yarn add @cloukit/toggle@1.7.0
+```
