@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { DemoComponent } from '../demo.component';
 import { CloukitThemeService } from '@cloukit/theme';
 import { CloukitToggleComponentThemeDefault } from '../../../../projects/cloukit/toggle/src/public_api';
 
@@ -15,7 +14,7 @@ export class AwesomeToggleTheme extends CloukitToggleComponentThemeDefault {
 @Component({
   selector: 'cloukit-story-01-themed',
   templateUrl: './story-01-themed.html',
-  styles: [ ].concat(DemoComponent.sharedStyles),
+  styleUrls: [ '../demo.styles.css' ]
 })
 export class Story01Component {
 
