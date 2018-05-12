@@ -1,7 +1,7 @@
 <div class="demo" [formGroup]="form">
 
   <div class="row">
-    <span>Is Schrödingers cat dead?</span>
+    <span class="label">Is Schrödingers cat dead?</span>
 
     <cloukit-toggle
       formControlName="isCatDead"
@@ -10,7 +10,7 @@
     <button
       type="button"
       (click)="toggleFormDisabled()"
-      class="superButton"
+      class="superButton superButton--ml"
     >{{ isFormDisabled ? 'enable' : 'disable' }} form</button>
   </div>
 

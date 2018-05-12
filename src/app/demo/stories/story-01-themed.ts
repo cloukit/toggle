@@ -15,7 +15,7 @@ export class AwesomeToggleTheme extends CloukitToggleComponentThemeDefault {
 @Component({
   selector: 'cloukit-story-01-themed',
   templateUrl: './story-01-themed.html',
-  styles: [ '.row span { width:200px; }' ].concat(DemoComponent.sharedStyles),
+  styles: [ ].concat(DemoComponent.sharedStyles),
 })
 export class Story01Component {
 
