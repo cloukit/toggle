@@ -4,8 +4,12 @@
  * https://github.com/cloukit/legal
  */
 import {
-  CloukitComponentTheme, CloukitIcons, CloukitStatefulAndModifierAwareElementThemeStyleDefinition
+  CloukitComponentTheme,
+  CloukitStatefulAndModifierAwareElementThemeStyleDefinition
 } from '@cloukit/theme';
+
+const check = 'M386.76 136L203.024 316.723l-78.016-76.74L95 269.502l78.02 76.74 30.005 29.513 213.745-210.24';
+const cross = 'M384.676 161.08l-31.6-31.08-96.738 95.153L159.598 130 128 161.08l96.74 95.152L128 351.385l31.6 31.08 96.738-95.155 96.74 95.153 31.597-31.08-96.74-95.15';
 
 /**
  * The default theme with round edges. It is used as default.
@@ -82,7 +86,7 @@ export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
         display: 'none',
       },
       icon: {
-        svgPathD: CloukitIcons.success,
+        svgPathD: check,
         svgStyle: {
           fill: '#fff',
           transform: 'translate(3px, 2px)',
@@ -116,7 +120,7 @@ export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
         top: '1px',
       },
       icon: {
-        svgPathD: CloukitIcons.failure,
+        svgPathD: cross,
         svgStyle: {
           fill: '#fff',
           transform: 'translate(3px, 2px)',

@@ -3,7 +3,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { DemoComponent } from '../demo.component';
 
 @Component({
-  selector: 'story-00-basic',
+  selector: 'cloukit-story-00-basic',
   templateUrl: './story-00-basic.html',
   styles: [ ].concat(DemoComponent.sharedStyles),
 })

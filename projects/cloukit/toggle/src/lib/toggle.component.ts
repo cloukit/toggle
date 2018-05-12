@@ -9,7 +9,7 @@ import {
   CloukitComponentTheme, CloukitStatefulAndModifierAwareElementThemeStyleDefinition,
   CloukitThemeService
 } from '@cloukit/theme';
-import { noop } from 'rxjs/util/noop';
+import { empty } from 'rxjs';
 
 export const CLOUKIT_TOGGLE_VALUE_ACCESSOR: any = {
   provide: NG_VALUE_ACCESSOR,
@@ -64,6 +64,10 @@ export const CLOUKIT_TOGGLE_VALUE_ACCESSOR: any = {
 })
 export class CloukitToggleComponent implements ControlValueAccessor, OnChanges {
 
+  // will be overridden on init
+  private onTouchedCallback: () => void = empty;
+  private onChangeCallback: (_: any) => void = empty;
+
   /**
    * Optional theme selector. Only use `theme` when you have registered a valid theme
    * via the `CloukitThemeService` from [`@cloukit/theme`]{@link https://cloukit.github.io/#/component/theme}.
@@ -110,7 +114,7 @@ export class CloukitToggleComponent implements ControlValueAccessor, OnChanges {
       }
     }
     if (this.state.internalValue) {
-      this.state.uiState = 'toggled'
+      this.state.uiState = 'toggled';
     } else {
       this.state.uiState = 'untoggled';
     }
@@ -131,10 +135,6 @@ export class CloukitToggleComponent implements ControlValueAccessor, OnChanges {
       this.setValue(!this.state.internalValue);
     }
   }
-
-  // will be overridden on init
-  private onTouchedCallback: () => void = noop;
-  private onChangeCallback: (_: any) => void = noop;
 
   /**
    * @overrides OnChanges
