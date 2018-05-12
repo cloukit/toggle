@@ -3,11 +3,7 @@
   "status": "EXPERIMENTAL",
   "versions": [
     {
-      "version": "1.9.1",
-      "hasTheme": true
-    },
-    {
-      "version": "1.7.0",
+      "version": "6.0.0",
       "hasTheme": true
     }
   ]
