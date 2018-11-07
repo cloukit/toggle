@@ -4,8 +4,10 @@
  * https://github.com/cloukit/legal
  */
 import {
+  CloukitBaseCssDefinitions,
   CloukitComponentTheme,
-  CloukitStatefulAndModifierAwareElementThemeStyleDefinition
+  CloukitIconDefinition,
+  CloukitSvgCssDefinitions,
 } from '@cloukit/theme';
 
 const check = 'M386.76 136L203.024 316.723l-78.016-76.74L95 269.502l78.02 76.74 30.005 29.513 213.745-210.24';
@@ -21,8 +23,8 @@ export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
     //
     // UNTOGGLED
     //
-    this.createStyle('wrapper', 'untoggled', 'base', {
-      style: {
+    this.buildStyle('wrapper', 'untoggled', 'base')
+      .withStyles(<CloukitBaseCssDefinitions>{
         border: '1px solid #555',
         borderRadius: '12px',
         position: 'relative',
@@ -34,25 +36,22 @@ export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
         display: 'inline-block',
         backgroundColor: '#777',
         transition: 'background-color 300ms linear',
-      }
-    } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition);
+      });
 
-    this.createStyle('wrapper', 'untoggled', 'disabled',
-      this.merge(this.getStyle('wrapper', 'untoggled', 'base'), {
-        style: {
-          cursor: 'not-allowed',
-        }
-      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+    this.buildStyle('wrapper', 'untoggled', 'disabled')
+      .inheritFrom('wrapper', 'untoggled', 'base')
+      .withStyles(<CloukitBaseCssDefinitions>{
+        cursor: 'not-allowed',
+      });
 
-    this.createStyle('wrapper', 'untoggled', 'hover',
-      this.merge(this.getStyle('wrapper', 'untoggled', 'base'), {
-        style: {
-          border: '1px solid #333',
-        }
-      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+    this.buildStyle('wrapper', 'untoggled', 'hover')
+      .inheritFrom('wrapper', 'untoggled', 'base')
+      .withStyles(<CloukitBaseCssDefinitions>{
+        border: '1px solid #333',
+      });
 
-    this.createStyle('circle', 'untoggled', 'base', {
-      style: {
+    this.buildStyle('circle', 'untoggled', 'base')
+      .withStyles(<CloukitBaseCssDefinitions>{
         borderRadius: '50%',
         width: '18px',
         height: '18px',
@@ -61,173 +60,128 @@ export class CloukitToggleComponentThemeDefault extends CloukitComponentTheme {
         backgroundColor: '#fff',
         userSelect: 'none',
         transition: 'left 300ms linear',
-      }
-    } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition);
+      });
 
-    this.createStyle('circle', 'untoggled', 'disabled',
-      this.merge(this.getStyle('circle', 'untoggled', 'base'), {
-        style: {
-          backgroundColor: '#a8a8a8',
-        }
-      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+    this.buildStyle('circle', 'untoggled', 'disabled')
+      .inheritFrom('circle', 'untoggled', 'base')
+      .withStyles(<CloukitBaseCssDefinitions>{
+        backgroundColor: '#a8a8a8',
+      });
 
-    this.createStyle('circle', 'untoggled', 'hover',
-      this.merge(this.getStyle('circle', 'untoggled', 'base'), {
-        style: {
-        }
-      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+    this.buildStyle('circle', 'untoggled', 'hover')
+      .inheritFrom('circle', 'untoggled', 'base');
 
-    this.createStyle('iconLeft', 'untoggled', 'base', {
-      style: {
+    this.buildStyle('iconLeft', 'untoggled', 'base')
+      .withStyles(<CloukitBaseCssDefinitions>{
         position: 'absolute',
         left: '2px',
         top: '1px',
         width: '20px',
         display: 'none',
-      },
-      icon: {
+      })
+      .withIcon(<CloukitIconDefinition>{
         svgPathD: check,
-        svgStyle: {
-          fill: '#fff',
-          transform: 'translate(3px, 2px)',
-          transition: 'fill 2s',
-        }
-      }
-    } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition);
+      })
+      .withIconStyles(<CloukitSvgCssDefinitions>{
+        fill: '#fff',
+        transform: 'translate(3px, 2px)',
+        transition: 'fill 2s',
+      });
 
-    this.createStyle('iconLeft', 'untoggled', 'disabled',
-      this.merge(this.getStyle('iconLeft', 'untoggled', 'base'), {
-        style: {
-        },
-        icon: {
-          svgStyle: {
-            fill: '#a8a8a8',
-          }
-        }
-      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+    this.buildStyle('iconLeft', 'untoggled', 'disabled')
+      .inheritFrom('iconLeft', 'untoggled', 'base')
+      .withIconStyles(<CloukitSvgCssDefinitions>{
+        fill: '#a8a8a8',
+      });
 
-    this.createStyle('iconLeft', 'untoggled', 'hover',
-      this.merge(this.getStyle('iconLeft', 'untoggled', 'base'), {
-        style: { },
-        icon: { }
-      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+    this.buildStyle('iconLeft', 'untoggled', 'hover')
+      .inheritFrom('iconLeft', 'untoggled', 'base');
 
-    this.createStyle('iconRight', 'untoggled', 'base', {
-      style: {
+    this.buildStyle('iconRight', 'untoggled', 'base')
+      .withStyles(<CloukitBaseCssDefinitions>{
         width: '20px',
         position: 'absolute',
         right: '2px',
         top: '1px',
-      },
-      icon: {
+      })
+      .withIcon(<CloukitIconDefinition>{
         svgPathD: cross,
-        svgStyle: {
-          fill: '#fff',
-          transform: 'translate(3px, 2px)',
-          transition: 'fill 2s',
-        }
-      }
-    } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition);
+      })
+      .withIconStyles(<CloukitSvgCssDefinitions>{
+        fill: '#fff',
+        transform: 'translate(3px, 2px)',
+        transition: 'fill 2s',
+      });
 
-    this.createStyle('iconRight', 'untoggled', 'disabled',
-      this.merge(this.getStyle('iconRight', 'untoggled', 'base'), {
-        style: {
-        }
-      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+    this.buildStyle('iconRight', 'untoggled', 'disabled')
+      .inheritFrom('iconRight', 'untoggled', 'base');
 
-    this.createStyle('iconRight', 'untoggled', 'hover',
-      this.merge(this.getStyle('iconRight', 'untoggled', 'base'), {
-        style: {
-        }
-      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+    this.buildStyle('iconRight', 'untoggled', 'hover')
+      .inheritFrom('iconRight', 'untoggled', 'base');
 
     //
     // TOGGLED
     //
-    this.createStyle('wrapper', 'toggled', 'base',
-      this.merge(this.getStyle('wrapper', 'untoggled', 'base'), {
-        style: {
-          backgroundColor: '#3FB13D',
-        }
-      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+    this.buildStyle('wrapper', 'toggled', 'base')
+      .inheritFrom('wrapper', 'untoggled', 'base')
+      .withStyles(<CloukitBaseCssDefinitions>{
+        backgroundColor: '#3FB13D',
+      });
 
-    this.createStyle('wrapper', 'toggled', 'disabled',
-      this.merge(this.getStyle('wrapper', 'toggled', 'base'), {
-        style: {
-          cursor: 'not-allowed',
-          backgroundColor: '#206D1E',
-        }
-      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+    this.buildStyle('wrapper', 'toggled', 'disabled')
+      .inheritFrom('wrapper', 'toggled', 'base')
+      .withStyles(<CloukitBaseCssDefinitions>{
+        cursor: 'not-allowed',
+        backgroundColor: '#206D1E',
+      });
 
-    this.createStyle('wrapper', 'toggled', 'hover',
-      this.merge(this.getStyle('wrapper', 'toggled', 'base'), {
-        style: {
-          border: '1px solid #333',
-        }
-      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+    this.buildStyle('wrapper', 'toggled', 'hover')
+      .inheritFrom('wrapper', 'toggled', 'base')
+      .withStyles(<CloukitBaseCssDefinitions>{
+        border: '1px solid #333',
+      });
 
-    this.createStyle('circle', 'toggled', 'base',
-      this.merge(this.getStyle('circle', 'untoggled', 'base'), {
-        style: {
-          left: '24px',
-        }
-      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+    this.buildStyle('circle', 'toggled', 'base')
+      .inheritFrom('circle', 'untoggled', 'base')
+      .withStyles(<CloukitBaseCssDefinitions>{
+        left: '24px',
+      });
 
-    this.createStyle('circle', 'toggled', 'disabled',
-      this.merge(this.getStyle('circle', 'toggled', 'base'), {
-        style: {
-          backgroundColor: '#a8a8a8',
-        }
-      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+    this.buildStyle('circle', 'toggled', 'disabled')
+      .inheritFrom('circle', 'toggled', 'base')
+      .withStyles(<CloukitBaseCssDefinitions>{
+        backgroundColor: '#a8a8a8',
+      });
 
-    this.createStyle('circle', 'toggled', 'hover',
-      this.merge(this.getStyle('circle', 'toggled', 'base'), {
-        style: {
-        }
-      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+    this.buildStyle('circle', 'toggled', 'hover')
+      .inheritFrom('circle', 'toggled', 'base');
 
-    this.createStyle('iconLeft', 'toggled', 'base',
-      this.merge(this.getStyle('iconLeft', 'untoggled', 'base'), {
-        style: {
-          display: 'block',
-        }
-      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+    this.buildStyle('iconLeft', 'toggled', 'base')
+      .inheritFrom('iconLeft', 'untoggled', 'base')
+      .withStyles(<CloukitBaseCssDefinitions>{
+        display: 'block',
+      });
 
-    this.createStyle('iconLeft', 'toggled', 'disabled',
-      this.merge(this.getStyle('iconLeft', 'toggled', 'base'), {
-        style: {
-        },
-        icon: {
-          svgStyle: {
-            fill: '#a8a8a8',
-          }
-        }
-      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+    this.buildStyle('iconLeft', 'toggled', 'disabled')
+      .inheritFrom('iconLeft', 'toggled', 'base')
+      .withIconStyles(<CloukitSvgCssDefinitions>{
+        fill: '#a8a8a8',
+      });
 
-    this.createStyle('iconLeft', 'toggled', 'hover',
-      this.merge(this.getStyle('iconLeft', 'toggled', 'base'), {
-        style: { },
-        icon: { }
-      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+    this.buildStyle('iconLeft', 'toggled', 'hover')
+      .inheritFrom('iconLeft', 'toggled', 'base');
 
-    this.createStyle('iconRight', 'toggled', 'base',
-      this.merge(this.getStyle('iconRight', 'untoggled', 'base'), {
-        style: {
-          display: 'none',
-        }
-      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+    this.buildStyle('iconRight', 'toggled', 'base')
+      .inheritFrom('iconRight', 'untoggled', 'base')
+      .withIconStyles(<CloukitSvgCssDefinitions>{
+        display: 'none',
+      });
 
-    this.createStyle('iconRight', 'toggled', 'disabled',
-      this.merge(this.getStyle('iconRight', 'toggled', 'base'), {
-        style: {
-        }
-      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+    this.buildStyle('iconRight', 'toggled', 'disabled')
+      .inheritFrom('iconRight', 'toggled', 'base');
 
-    this.createStyle('iconRight', 'toggled', 'hover',
-      this.merge(this.getStyle('iconRight', 'toggled', 'base'), {
-        style: {
-        }
-      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+    this.buildStyle('iconRight', 'toggled', 'hover')
+      .inheritFrom('iconRight', 'toggled', 'base');
   }
 
 }
@@ -244,43 +198,67 @@ export class CloukitToggleComponentThemeCornered extends CloukitToggleComponentT
     //
     // UNTOGGLED
     //
-    const wrapperUntoggledBase = this.getElementTheme('wrapper', 'untoggled', 'base');
-    wrapperUntoggledBase.styleDef.style.borderRadius = '1px';
+    this.buildStyle('wrapper', 'untoggled', 'base')
+      .withStyles(<CloukitBaseCssDefinitions>{
+        borderRadius: '1px'
+      });
 
-    const wrapperUntoggledHover = this.getElementTheme('wrapper', 'untoggled', 'hover');
-    wrapperUntoggledHover.styleDef.style.borderRadius = '1px';
+    this.buildStyle('wrapper', 'untoggled', 'hover')
+      .withStyles(<CloukitBaseCssDefinitions>{
+        borderRadius: '1px'
+      });
 
-    const wrapperUntoggledDisabled = this.getElementTheme('wrapper', 'untoggled', 'disabled');
-    wrapperUntoggledDisabled.styleDef.style.borderRadius = '1px';
+    this.buildStyle('wrapper', 'untoggled', 'disabled')
+      .withStyles(<CloukitBaseCssDefinitions>{
+        borderRadius: '1px'
+      });
 
-    const circleUntoggledBase = this.getElementTheme('circle', 'untoggled', 'base');
-    circleUntoggledBase.styleDef.style.borderRadius = '1px';
+    this.buildStyle('circle', 'untoggled', 'base')
+      .withStyles(<CloukitBaseCssDefinitions>{
+        borderRadius: '1px'
+      });
 
-    const circleUntoggledDisabled = this.getElementTheme('circle', 'untoggled', 'disabled');
-    circleUntoggledDisabled.styleDef.style.borderRadius = '1px';
+    this.buildStyle('circle', 'untoggled', 'disabled')
+      .withStyles(<CloukitBaseCssDefinitions>{
+        borderRadius: '1px'
+      });
 
-    const circleUntoggledHover = this.getElementTheme('circle', 'untoggled', 'hover');
-    circleUntoggledHover.styleDef.style.borderRadius = '1px';
+    this.buildStyle('circle', 'untoggled', 'hover')
+      .withStyles(<CloukitBaseCssDefinitions>{
+        borderRadius: '1px'
+      });
 
     //
     // TOGGLED
     //
-    const wrapperToggledBase = this.getElementTheme('wrapper', 'toggled', 'base');
-    wrapperToggledBase.styleDef.style.borderRadius = '1px';
+    this.buildStyle('wrapper', 'toggled', 'base')
+      .withStyles(<CloukitBaseCssDefinitions>{
+        borderRadius: '1px'
+      });
 
-    const wrapperToggledHover = this.getElementTheme('wrapper', 'toggled', 'hover');
-    wrapperToggledHover.styleDef.style.borderRadius = '1px';
+    this.buildStyle('wrapper', 'toggled', 'hover')
+      .withStyles(<CloukitBaseCssDefinitions>{
+        borderRadius: '1px'
+      });
 
-    const wrapperToggledDisabled = this.getElementTheme('wrapper', 'toggled', 'disabled');
-    wrapperToggledDisabled.styleDef.style.borderRadius = '1px';
+    this.buildStyle('wrapper', 'toggled', 'disabled')
+      .withStyles(<CloukitBaseCssDefinitions>{
+        borderRadius: '1px'
+      });
 
-    const circleToggledBase = this.getElementTheme('circle', 'toggled', 'base');
-    circleToggledBase.styleDef.style.borderRadius = '1px';
+    this.buildStyle('circle', 'toggled', 'base')
+      .withStyles(<CloukitBaseCssDefinitions>{
+        borderRadius: '1px'
+      });
 
-    const circleToggledDisabled = this.getElementTheme('circle', 'toggled', 'disabled');
-    circleToggledDisabled.styleDef.style.borderRadius = '1px';
+    this.buildStyle('circle', 'toggled', 'disabled')
+      .withStyles(<CloukitBaseCssDefinitions>{
+        borderRadius: '1px'
+      });
 
-    const circleToggledHover = this.getElementTheme('circle', 'toggled', 'hover');
-    circleToggledHover.styleDef.style.borderRadius = '1px';
+    this.buildStyle('circle', 'toggled', 'hover')
+      .withStyles(<CloukitBaseCssDefinitions>{
+        borderRadius: '1px'
+      });
   }
 }
